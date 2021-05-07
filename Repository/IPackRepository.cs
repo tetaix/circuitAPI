@@ -5,12 +5,12 @@ using tetaix_circuit.Modele;
 
 namespace Api.Repositories
 {
-    public interface ICircuitRepository
+    public interface IPackRepository
     {
-        Task<List<Circuit>> GetCircuit();
-        Task<Circuit> GetCircuitById(int id);
-        Task CreateCircuit(Circuit Circuit);
-        Task UpdateCircuit(Circuit Circuit);
-        Task DeleteCircuit(int id);
+        Task<List<Pack>> GetPack();
+        Task<Pack> GetPackById(int id);
+        Task CreatePack(Pack Pack);
+        Task UpdatePack(Pack Pack);
+        Task DeletePack(int id);
     }
 }

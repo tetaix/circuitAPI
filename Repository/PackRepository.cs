@@ -7,41 +7,41 @@ using tetaix_circuit.Modele;
 
 namespace Api.Repositories
 {
-    public class CircuitRepository : ICircuitRepository
+    public class PackRepository : IPackRepository
     {
 
         public readonly PackContext _context;
-        public CircuitRepository(PackContext context)
+        public PackRepository(PackContext context)
         {
             _context = context;
         }
 
-        public async Task<List<Circuit>> GetCircuit()
+        public async Task<List<Pack>> GetPack()
         {
-            return await _context.Circuit.ToListAsync();
+            return await _context.Pack.ToListAsync();
         }
 
-        public async Task<Circuit> GetCircuitById(int id)
+        public async Task<Pack> GetPackById(int id)
         {
-            return await _context.Circuit.FindAsync(id);
+            return await _context.Pack.FindAsync(id);
         }
 
-        public async Task CreateCircuit(Circuit Circuit)
+        public async Task CreatePack(Pack Pack)
         {
-            _context.Circuit.Add(Circuit);
+            _context.Pack.Add(Pack);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteCircuit(int id)
+        public async Task DeletePack(int id)
         {
-            Circuit Circuit = await GetCircuitById(id);
-            _context.Circuit.Remove(Circuit);
+            Pack Pack = await GetPackById(id);
+            _context.Pack.Remove(Pack);
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateCircuit(Circuit Circuit)
+        public async Task UpdatePack(Pack Pack)
         {
-            _context.Circuit.Update(Circuit);
+            _context.Pack.Update(Pack);
             await _context.SaveChangesAsync();
         }
 

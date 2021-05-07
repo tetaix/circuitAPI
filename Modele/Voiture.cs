@@ -3,9 +3,14 @@ namespace tetaix_circuit.Modele
 {
     public class Voiture
     {
+
         public int VoitureId { get; set; }
-        public string nom_voitiure { get; set; }
-        public int nombre_km { get; set; }
+        public string Nom { get; set; }
+        public int puissance { get; set; }
+        public int nb_place { get; set; }
+        public int vmax { get; set; }
+        public int annee { get; set; }
+        public string image { get; set; }
         public int etat_voiture { get; set; }
 
     }
