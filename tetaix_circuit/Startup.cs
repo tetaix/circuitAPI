@@ -36,7 +36,7 @@ namespace tetaix_circuit
         public void ConfigureServices(IServiceCollection services)
 
         {
-            services.AddDbContext<PackContext>(options => options.UseSqlServer("Server=localhost,1433; Database=tetaix_circuit; User=sa; Password = BddB0cc9*;"));
+            services.AddDbContext<PackContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<User, Role>()
                 .AddEntityFrameworkStores<PackContext>()
