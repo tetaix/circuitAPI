@@ -58,7 +58,6 @@ namespace tetaix_circuit
 
             services.AddAuth(jwtSettings);
 
-            services.AddScoped<ICircuitRepository, CircuitRepository>();
 
             services.AddScoped<IVoitureRepository, VoitureRepository>();
 
