@@ -12,10 +12,6 @@ namespace Api.PackDbContext
 
         }
 
-        public DbSet<Pack> Pack { get; set; }
-
-        public DbSet<Circuit> Circuit { get; set; }
-
         public DbSet<Voiture> Voiture { get; set; }
     }
 }
