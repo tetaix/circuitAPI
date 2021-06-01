@@ -12,6 +12,7 @@ namespace tetaix_circuit.Modele
         public int annee { get; set; }
         public string image { get; set; }
         public string description { get; set; }
+        public int prix { get; set; }
         public int etat_voiture { get; set; }
 
     }

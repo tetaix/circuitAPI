@@ -4,14 +4,16 @@ using Api.PackDbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace tetaix_circuit.Migrations
 {
     [DbContext(typeof(PackContext))]
-    partial class PackContextModelSnapshot : ModelSnapshot
+    [Migration("20210601065030_PrixVoiture")]
+    partial class PrixVoiture
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
